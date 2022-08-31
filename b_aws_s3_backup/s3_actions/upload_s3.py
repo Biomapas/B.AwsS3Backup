@@ -7,7 +7,7 @@ from b_aws_s3_backup.print_colors import PrintColors
 from b_aws_s3_backup.s3_actions.base_s3_action import BaseS3Action
 
 
-class UploadDb(BaseS3Action):
+class UploadS3(BaseS3Action):
     def upload(self, bucket_name: str, backups_dir: Optional[str] = None) -> None:
         backups_dir = backups_dir or self.default_directory(bucket_name)
 
